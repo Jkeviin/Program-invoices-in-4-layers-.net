@@ -143,9 +143,9 @@
             this.label5.ForeColor = System.Drawing.Color.LightGray;
             this.label5.Location = new System.Drawing.Point(78, 47);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 16);
+            this.label5.Size = new System.Drawing.Size(71, 16);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Cargo";
+            this.label5.Text = "Proveedor";
             // 
             // label4
             // 
@@ -154,9 +154,9 @@
             this.label4.ForeColor = System.Drawing.Color.LightGray;
             this.label4.Location = new System.Drawing.Point(78, 28);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 16);
+            this.label4.Size = new System.Drawing.Size(61, 16);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Apellidos User";
+            this.label4.Text = "Telefono";
             // 
             // label3
             // 
