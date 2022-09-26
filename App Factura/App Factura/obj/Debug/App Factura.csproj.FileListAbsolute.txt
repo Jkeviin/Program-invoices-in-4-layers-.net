@@ -1,0 +1,17 @@
+D:\FACTURA\App Factura\App Factura\bin\Debug\App Factura.exe.config
+D:\FACTURA\App Factura\App Factura\bin\Debug\App Factura.exe
+D:\FACTURA\App Factura\App Factura\bin\Debug\App Factura.pdb
+D:\FACTURA\App Factura\App Factura\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+D:\FACTURA\App Factura\App Factura\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\FACTURA\App Factura\App Factura\obj\Debug\App Factura.csproj.AssemblyReference.cache
+D:\FACTURA\App Factura\App Factura\obj\Debug\App Factura.csproj.SuggestedBindingRedirects.cache
+D:\FACTURA\App Factura\App Factura\obj\Debug\App_Factura.Properties.Resources.resources
+D:\FACTURA\App Factura\App Factura\obj\Debug\App Factura.csproj.GenerateResource.cache
+D:\FACTURA\App Factura\App Factura\obj\Debug\App Factura.csproj.CoreCompileInputs.cache
+D:\FACTURA\App Factura\App Factura\obj\Debug\App Factura.csproj.CopyComplete
+D:\FACTURA\App Factura\App Factura\obj\Debug\App Factura.exe
+D:\FACTURA\App Factura\App Factura\obj\Debug\App Factura.pdb
+D:\FACTURA\App Factura\App Factura\obj\Debug\App_Factura.Login.resources
+D:\FACTURA\App Factura\App Factura\obj\Debug\App_Factura.PR_CrearCategoria.resources
+D:\FACTURA\App Factura\App Factura\obj\Debug\App_Factura.Logo.resources
+D:\FACTURA\App Factura\App Factura\obj\Debug\App_Factura.PR_DashBoard.resources
