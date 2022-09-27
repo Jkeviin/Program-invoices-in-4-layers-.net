@@ -65,6 +65,7 @@
             this.Controls.Add(this.lblTITLE);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Logo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormLogo";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

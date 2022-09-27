@@ -567,14 +567,14 @@ GO
 CREATE PROCEDURE USP_Listar_Categoria
 	AS
 	BEGIN
-	SELECT nom_CT FROM CATEGORIA	order by nom_CT ASC;
+	SELECT nom_CT AS "Nombre" FROM CATEGORIA order by nom_CT ASC;
 	END
 GO
 
 CREATE PROCEDURE USP_Listar_Cliente
 	as
 	BEGIN 
-		SELECT nom_CL + ' '+ apellido_CL, telefono_CL, direccion_CL FROM CLIENTE order by nom_CL asc;
+		SELECT nom_CL + ' '+ apellido_CL, telefono_CL AS "Telefono", direccion_CL AS "Direccion" FROM CLIENTE order by nom_CL asc;
 	END
 GO
 

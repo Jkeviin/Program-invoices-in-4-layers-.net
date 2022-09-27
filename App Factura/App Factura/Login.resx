@@ -135,29 +135,11 @@
   <metadata name="lineShape1.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>407, 0</value>
   </metadata>
-  <metadata name="lineShape2.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>305, 173, 407, 0</value>
-  </metadata>
-  <metadata name="lineShape2.Location" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>305, 173</value>
-  </metadata>
-  <metadata name="lineShape2.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>407, 0</value>
-  </metadata>
-  <metadata name="lineShape1.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>307, 112, 407, 0</value>
-  </metadata>
-  <metadata name="lineShape1.Location" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>307, 112</value>
-  </metadata>
-  <metadata name="lineShape1.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>407, 0</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFBMSURBVHhe7d0J
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFBMSURBVHhe7d0J
         /H1tPe//1F0a0XA3p5QmJQ2KTjp3iO7mKERo5nYScVJEZL6RIYlDMsfNv8jYrTrHIUeI3MhwZEgdY6a/
         jJnO+83enc+++uzv73dd67rWXnuv1/vxeD4e7O7ftda6vntd3/d3D2td6d/+7d+AKsp7y+fKy+TN4gcB
         zOtN8hJ5ptwhO1eBs6QPAhnlAvEv/rdJXIgAHNY/yrPkguzcBTLpg0BJua78gsRFB8CyvFaum53DQCl9
@@ -589,7 +571,7 @@
   <data name="label2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        ewAAAHsBR0tLmwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFKSURBVDhPnVNL
+        egAAAHoBlQypfwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFKSURBVDhPnVNL
         TsMwFHR7GK7RJraTKnbvwhG4RpcsumWDwhIkbgCF0I9ASvoRrEBC6qro4XGbxClm0Vga5cWZGft9woio
         gVWSnOVaXyy1vi6GagMgxh6+HfPrF8Y6uVLnhVZbA/oHW3AMt9s0gFir1CPw4i0Z3ENTGRxO9pJ9yFVC
         s0hcWgPkZTara3+ORvQ1HlMx1LXIxNjDt3LvRfDdQoiYoTgV0QBErO803ZsYIMayxgfePJI0kyJlttqO

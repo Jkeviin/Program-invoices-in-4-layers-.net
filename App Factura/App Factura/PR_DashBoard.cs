@@ -131,10 +131,18 @@ namespace App_Factura
             if (panelMenu.Width == 230)
             {
                 this.tmContraerMenu.Start();
+                this.btnCompras.Text = "";
+                this.btnCategorias.Text = "";
+                this.btnProductos.Text = "";
+                this.btnAjustes.Text = "";
             }
             else if (panelMenu.Width == 55)
             {
                 this.tmExpandirMenu.Start();
+                this.btnCompras.Text = "           COMPRAS";
+                this.btnCategorias.Text = "         CATEGORIAS";
+                this.btnProductos.Text = "         PRODUCTOS";
+                this.btnAjustes.Text = "            AJUSTES";
             }
 
             //-------SIN EFECTO 
@@ -254,6 +262,16 @@ namespace App_Factura
         private void lblTitle_Click(object sender, EventArgs e)
         {
             AbrirFormEnPanel(new Logo());
+        }
+
+        private void btnAjustes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelContenedorForm_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void OcultarSubMenuActivo()
