@@ -61,6 +61,12 @@
     <Compile Include="Logo.Designer.cs">
       <DependentUpon>Logo.cs</DependentUpon>
     </Compile>
+    <Compile Include="PR_CrearProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PR_CrearProducto.Designer.cs">
+      <DependentUpon>PR_CrearProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="PR_DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
