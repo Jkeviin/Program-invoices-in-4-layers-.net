@@ -398,7 +398,6 @@ CREATE PROCEDURE USP_eliminar_Proovedor
 		WHERE nitProveedor = @nitProveedor	
 	END
 GO
-
 -- PROCEDIMIENTOS TELEFONO_PROVEEDOR (Kevin Ortega)
 CREATE PROCEDURE USP_Registro_Telefono_Proveedor
 	@nitProveedor varchar(50),

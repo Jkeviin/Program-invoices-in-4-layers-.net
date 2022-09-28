@@ -269,9 +269,11 @@ namespace App_Factura
 
         }
 
-        private void panelContenedorForm_Paint(object sender, PaintEventArgs e)
+        private void btnCrearCategoria_Click(object sender, EventArgs e)
         {
-
+            PR_CrearCategoria fm = new PR_CrearCategoria();
+            fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            AbrirFormEnPanel(fm);
         }
 
         private void OcultarSubMenuActivo()

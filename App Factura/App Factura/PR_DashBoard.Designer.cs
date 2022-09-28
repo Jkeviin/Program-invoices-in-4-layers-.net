@@ -121,7 +121,6 @@
             this.panelContenedorForm.Name = "panelContenedorForm";
             this.panelContenedorForm.Size = new System.Drawing.Size(870, 485);
             this.panelContenedorForm.TabIndex = 6;
-            this.panelContenedorForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedorForm_Paint);
             // 
             // panel1
             // 
@@ -173,11 +172,10 @@
             // 
             // lbFecha
             // 
-            this.lbFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbFecha.AutoSize = true;
+            this.lbFecha.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbFecha.ForeColor = System.Drawing.Color.White;
-            this.lbFecha.Location = new System.Drawing.Point(652, 46);
+            this.lbFecha.Location = new System.Drawing.Point(668, 47);
             this.lbFecha.Name = "lbFecha";
             this.lbFecha.Size = new System.Drawing.Size(184, 16);
             this.lbFecha.TabIndex = 4;
@@ -198,7 +196,7 @@
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.LightGray;
-            this.lblHora.Location = new System.Drawing.Point(716, 10);
+            this.lblHora.Location = new System.Drawing.Point(738, 10);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(120, 31);
             this.lblHora.TabIndex = 1;
@@ -283,7 +281,7 @@
             this.btnBorrarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBorrarProducto.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBorrarProducto.FlatAppearance.BorderSize = 0;
-            this.btnBorrarProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnBorrarProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(122)))), ((int)(((byte)(140)))));
             this.btnBorrarProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btnBorrarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -302,7 +300,7 @@
             this.btnEditarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditarProducto.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEditarProducto.FlatAppearance.BorderSize = 0;
-            this.btnEditarProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnEditarProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(122)))), ((int)(((byte)(140)))));
             this.btnEditarProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btnEditarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -321,7 +319,7 @@
             this.btnCrearProducto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCrearProducto.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCrearProducto.FlatAppearance.BorderSize = 0;
-            this.btnCrearProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnCrearProducto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(122)))), ((int)(((byte)(140)))));
             this.btnCrearProducto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btnCrearProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrearProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -394,7 +392,7 @@
             this.btnEliminarCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminarCategoria.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEliminarCategoria.FlatAppearance.BorderSize = 0;
-            this.btnEliminarCategoria.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnEliminarCategoria.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(122)))), ((int)(((byte)(140)))));
             this.btnEliminarCategoria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btnEliminarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -413,7 +411,7 @@
             this.btnEditarCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditarCategoria.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEditarCategoria.FlatAppearance.BorderSize = 0;
-            this.btnEditarCategoria.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnEditarCategoria.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(122)))), ((int)(((byte)(140)))));
             this.btnEditarCategoria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btnEditarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -432,7 +430,7 @@
             this.btnCrearCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCrearCategoria.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCrearCategoria.FlatAppearance.BorderSize = 0;
-            this.btnCrearCategoria.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnCrearCategoria.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(122)))), ((int)(((byte)(140)))));
             this.btnCrearCategoria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btnCrearCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrearCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -445,6 +443,7 @@
             this.btnCrearCategoria.Text = "Crear Categoria";
             this.btnCrearCategoria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCrearCategoria.UseVisualStyleBackColor = true;
+            this.btnCrearCategoria.Click += new System.EventHandler(this.btnCrearCategoria_Click);
             // 
             // panelBtnCategorias
             // 
@@ -504,7 +503,7 @@
             this.btnHistorial.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHistorial.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHistorial.FlatAppearance.BorderSize = 0;
-            this.btnHistorial.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnHistorial.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(122)))), ((int)(((byte)(140)))));
             this.btnHistorial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHistorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -524,7 +523,7 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(122)))), ((int)(((byte)(140)))));
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
