@@ -36,7 +36,8 @@ create table EMPLEADO (
 	telefono_E varchar(20) not null,
 	correo_E varchar(100) not null,
 	contraseña_E varchar(100) not null,
-	direccion_E varchar(150) not null
+	direccion_E varchar(150) not null,
+	estado_E bit not null,
 );
 
 -- D
@@ -46,8 +47,8 @@ create table CATEGORIA (
 	cod_referenceCT varchar(50) primary key,
 	-- Atributos base
 	nom_CT varchar (20) not null,
-	descripcion_CT varchar (100) not null 
-
+	descripcion_CT varchar (100) not null,
+	estado_CT bit not null
 );
 
 -- K
@@ -62,6 +63,7 @@ create table PRODUCTO (
 	descripcion_P varchar(300) not null,
 	valor float not null,
 	stock int not null,
+	estado_P bit not null,
 	-- Foreign Key
 	foreign key (cod_referenceCT) references CATEGORIA(cod_referenceCT)
 );
@@ -78,6 +80,7 @@ create table  PROVEEDOR (
 	correo_PR varchar(50) not null,
 	contraseña_PR varchar(100) not null,
 	pagina_web_PR varchar(50) null,
+	estado_PR bit not null,
 );
 
 -- K
@@ -108,7 +111,7 @@ create table COMPRA (
 	iva float not null,
 	-- Vinculo Foreign Key
 	foreign key (nitProveedor) references PROVEEDOR(nitProveedor),
-	foreign key (cedula_E  ) references EMPLEADO(cedula_E  )
+	foreign key (cedula_E  ) references EMPLEADO(cedula_E)
 );
 GO
 
@@ -120,7 +123,8 @@ create table CLIENTE(
 	nom_CL varchar(20) not null,
 	apellido_CL varchar(100) not null,
 	telefono_CL varchar(20) not null,
-	direccion_CL varchar(150) not null
+	direccion_CL varchar(150) not null,
+	estado_CL bit not null
  ); 
  GO
 
@@ -153,7 +157,7 @@ create table PRODUCTO_COMPRA (
 	-- Atributos
 	cant int not null,
 	costo float not null,
-	valor_Total float  not null ,
+	valor_Total float  not null,
 	-- Vinculo Foreign Key
 	foreign key (cod_P) references PRODUCTO (cod_P),
 	foreign KEY (nro_C) references COMPRA (nro_C), 	
@@ -181,23 +185,23 @@ create table PRODUCTO_COMPRA (
 
  -- || INSERCCIÓN DATOS ||
 -- K & S
-INSERT INTO  CLIENTE (cedula_CL,nom_CL, apellido_CL, telefono_CL, direccion_CL) VALUES
-					 ('1','Kevin', 'Garzon', '3107070709', 'calle30 #26-49'	);
+INSERT INTO  CLIENTE (cedula_CL,nom_CL, apellido_CL, telefono_CL, direccion_CL, estado_CL) VALUES
+					 ('1','Kevin', 'Garzon', '3107070709', 'calle30 #26-49', 1);
 GO
-INSERT INTO EMPLEADO (cedula_E   ,nombre_E, apellido_E, telefono_E, correo_E, contraseña_E, direccion_E) VALUES
-						('12','Pepe','Ortega','3107465490','slash123@gmail.com', 'empleado123', 'calle 21#26-45 apto 301 barrio San José');
+INSERT INTO EMPLEADO (cedula_E   ,nombre_E, apellido_E, telefono_E, correo_E, contraseña_E, direccion_E, estado_E) VALUES
+						('12','Pepe','Ortega','3107465490','slash123@gmail.com', 'empleado123', 'calle 21#26-45 apto 301 barrio San José', 1);
 GO
-INSERT INTO CATEGORIA (cod_referenceCT,nom_CT,descripcion_CT) VALUES
-						('123','Electrónicos','Toda una gamma completa de Televisores, Computadores, etc...');
+INSERT INTO CATEGORIA (cod_referenceCT,nom_CT,descripcion_CT, estado_CT) VALUES
+						('123','Electrónicos','Toda una gamma completa de Televisores, Computadores, etc...', 1);
 GO
-INSERT INTO PRODUCTO (cod_P,cod_referenceCT, nom_P, descripcion_P, valor, stock) VALUES
-						('1234','123', 'Televisor Samsung', 'Televisor de 52pg hd ultra 4k', 1000000, 99);
+INSERT INTO PRODUCTO (cod_P,cod_referenceCT, nom_P, descripcion_P, valor, stock, estado_P) VALUES
+						('1234','123', 'Televisor Samsung', 'Televisor de 52pg hd ultra 4k', 1000000, 99, 1);
 GO
-INSERT INTO PROVEEDOR (nitProveedor,nom_PR, descript_PR, direccion_PR, correo_PR,contraseña_PR, pagina_web_PR) VALUES
-						('12345','Importanciones gomez hermanos', 'Los mejores proovedores de todo el pais', 'calle10a #77-44', 'importancionesgomezhermanos@gmail.com', 'proveedor123', 'www.gomezhermanos.com');
+INSERT INTO PROVEEDOR (nitProveedor,nom_PR, descript_PR, direccion_PR, correo_PR,contraseña_PR, pagina_web_PR, estado_PR) VALUES
+						('12345','Importanciones gomez hermanos', 'Los mejores proovedores de todo el pais', 'calle10a #77-44', 'importancionesgomezhermanos@gmail.com', 'proveedor123', 'www.gomezhermanos.com', 1);
 GO
-INSERT INTO TELEFONO_PROVEEDOR (id_tel,nitProveedor, telefono) VALUES
-						(1,'12345', '3107567654');
+INSERT INTO TELEFONO_PROVEEDOR (nitProveedor, telefono) VALUES
+						('12345', '3107567654');
 GO
 INSERT INTO  COMPRA (nro_C,nitProveedor, cedula_E  , fecha, total, subtotal, iva) VALUES
 						('1234567','12345', '12', '2022-10-20', 1630000, 1600000, 30000);
@@ -227,8 +231,8 @@ CREATE PROCEDURE USP_Registro_Empleado
 	@direc_E VARCHAR(150)
 	as
 	BEGIN 
-		INSERT INTO EMPLEADO (cedula_E, nombre_E, apellido_E, telefono_E, correo_E, contraseña_E, direccion_E) VALUES
-							(@cedula_E, @nom_E, @ape_E, @tele_E, @Correo_E, @contraseña_E, @direc_E);
+		INSERT INTO EMPLEADO (cedula_E, nombre_E, apellido_E, telefono_E, correo_E, contraseña_E, direccion_E, estado_E) VALUES
+							(@cedula_E, @nom_E, @ape_E, @tele_E, @Correo_E, @contraseña_E, @direc_E, 1);
 	END
 GO
 
@@ -251,8 +255,19 @@ CREATE PROCEDURE USP_Actualizar_Empleado
 			contraseña_E = @constraseña_E
 		WHERE cedula_E = @cedula_E	
 	END
+GO
 
-	GO
+CREATE PROCEDURE USP_Eliminar_Empleado
+	@cedula_E varchar(50)
+	AS
+	BEGIN
+		UPDATE EMPLEADO
+		SET estado_E = 0
+		WHERE cedula_E = @cedula_E	
+	END
+GO
+
+
 
 -- PROCEDIMIENTOS CATEGORIA (Daniel Alfonso)
 
@@ -262,8 +277,8 @@ CREATE PROCEDURE USP_Registro_Categoria
 	@descrip_CT VARCHAR(100)
 	as
 	BEGIN 
-		INSERT INTO CATEGORIA(cod_referenceCT, nom_CT , descripcion_CT) VALUES
-						 (@cod_referenceCT, @nom_CT , @descrip_CT);
+		INSERT INTO CATEGORIA(cod_referenceCT, nom_CT , descripcion_CT, estado_CT) VALUES
+						 (@cod_referenceCT, @nom_CT , @descrip_CT, 1);
 	END
 GO
 
@@ -274,18 +289,19 @@ CREATE PROCEDURE USP_Actualizar_Categoria
 	AS
 	BEGIN
 		UPDATE CATEGORIA
-		SET cod_referenceCT@cod_referenceCT,
+		SET cod_referenceCT = @cod_referenceCT,
 			nom_CT = @nom_CT,
 			descripcion_CT = @descrip_CT
 		WHERE 	cod_referenceCT = @cod_referenceCT 
 	END
 GO
 
-CREATE PROCEDURE USP_eliminar_Categoria
+CREATE PROCEDURE USP_Eliminar_Categoria
 	@cod_referenceCT varchar(50)
 	AS
 	BEGIN
-	DELETE FROM CATEGORIA
+	UPDATE CATEGORIA
+		SET estado_CT = 0
 		WHERE cod_referenceCT = @cod_referenceCT	
 	END
 GO
@@ -298,11 +314,12 @@ CREATE PROCEDURE USP_Registro_Producto
 	@cod_referenceCT varchar(50),
 	@descripcion_P VARCHAR(300),
 	@valor float,
-	@stock int
+	@stock int,
+	@estado_P bit
 	as
 	BEGIN 
-		INSERT INTO PRODUCTO (cod_P, nom_P, cod_referenceCT, descripcion_P, valor, stock) VALUES
-						 (@cod_P, @nom_P, @cod_referenceCT, @descripcion_P, @valor, @stock);
+		INSERT INTO PRODUCTO (cod_P, nom_P, cod_referenceCT, descripcion_P, valor, stock, estado_P) VALUES
+						 (@cod_P, @nom_P, @cod_referenceCT, @descripcion_P, @valor, @stock, 1);
 	END
 GO
 
@@ -329,8 +346,9 @@ CREATE PROCEDURE USP_eliminar_Producto
 	@cod_P varchar(50)
 	AS
 	BEGIN
-	DELETE FROM PRODUCTO
-		WHERE cod_P = @cod_P	
+		UPDATE PRODUCTO
+		SET estado_P = 0
+		WHERE 	cod_P = @cod_P 	
 	END
 GO
 
@@ -345,8 +363,8 @@ CREATE PROCEDURE USP_Registro_Proveedor
 	@pagina_web_PR varchar(50)
 	as
 	BEGIN 
-		INSERT INTO PROVEEDOR(nitProveedor, nom_PR, descript_PR, direccion_PR, Correo_PR, contraseña_PR, pagina_web_PR) VALUES
-						 (@nitProveedor, @nom_PR, @descript_PR, @direccion_PR, @correo_PR,@contraseña_PR, @pagina_web_PR);
+		INSERT INTO PROVEEDOR(nitProveedor, nom_PR, descript_PR, direccion_PR, Correo_PR, contraseña_PR, pagina_web_PR, estado_PR) VALUES
+						 (@nitProveedor, @nom_PR, @descript_PR, @direccion_PR, @correo_PR,@contraseña_PR, @pagina_web_PR, 1);
 	END
 GO
 CREATE PROCEDURE USP_Actualizar_Proveedor
@@ -375,7 +393,8 @@ CREATE PROCEDURE USP_eliminar_Proovedor
 	@nitProveedor varchar(50)
 	AS
 	BEGIN
-	DELETE FROM PROVEEDOR
+	UPDATE PROVEEDOR
+		SET estado_PR = 0
 		WHERE nitProveedor = @nitProveedor	
 	END
 GO
@@ -472,8 +491,8 @@ CREATE PROCEDURE USP_Registro_Cliente
 	@direccion_CL VARCHAR(20)
 	as
 	BEGIN 
-		INSERT INTO CLIENTE(cedula_CL, nom_CL, apellido_CL, telefono_CL, direccion_CL) VALUES
-						 (@cedula_CL, @nom_CL, @apellido_CL, @telefono_CL, @direccion_CL );
+		INSERT INTO CLIENTE(cedula_CL, nom_CL, apellido_CL, telefono_CL, direccion_CL, estado_CL) VALUES
+						 (@cedula_CL, @nom_CL, @apellido_CL, @telefono_CL, @direccion_CL, 1);
 	END
 GO
 
@@ -501,8 +520,9 @@ CREATE PROCEDURE USP_eliminar_Cliente
 	@cedula_CL varchar(50)
 	AS
 	BEGIN
-	DELETE FROM CLIENTE
-		WHERE cedula_CL = @cedula_CL	
+	UPDATE CLIENTE
+		SET estado_CL = 0
+		WHERE 	cedula_CL = @cedula_CL 
 	END
 GO
 
@@ -513,7 +533,7 @@ CREATE PROCEDURE USP_inicio_sesion_Empleado
 
 	AS
 	BEGIN
-	select cedula_E   from EMPLEADO where contraseña_E = @contraseña_E and correo_E = @correo_E;
+	select cedula_E   from EMPLEADO where contraseña_E = @contraseña_E and correo_E = @correo_E and cedula_E = 1;
 	END
 GO
 
@@ -682,17 +702,6 @@ CREATE PROCEDURE USP_buscar_venta
 as
 BEGIN
 		SELECT * FROM VENTA WHERE nro_V = @nro_V
-END
-GO
-
-
---|| PROCEDIMIENTOS TABLAS FUENTE ||
--- PRODUCTO COMPRA
- GO
-CREATE PROCEDURE USP_buscar_producto_compra
-
-as
-BEGIN
 END
 GO
 
