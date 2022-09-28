@@ -32,3 +32,4 @@ C:\Users\adsi\Desktop\program-invoices-in-4-layers-.net\App Factura\App Factura\
 C:\Users\adsi\Desktop\program-invoices-in-4-layers-.net\App Factura\App Factura\obj\Debug\App Factura.pdb
 C:\Users\adsi\Desktop\program-invoices-in-4-layers-.net\App Factura\App Factura\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 D:\FACTURA\App Factura\App Factura\obj\Debug\App_Factura.PR_CrearCategoria.resources
+D:\FACTURA\App Factura\App Factura\obj\Debug\App_Factura.Registro.resources

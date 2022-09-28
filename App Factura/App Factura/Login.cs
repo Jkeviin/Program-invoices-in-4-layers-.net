@@ -98,5 +98,10 @@ namespace App_Factura
             Vent_Proveedor.Show();
             this.Hide();
         }
+
+        private void linkCrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+        }
     }
 }

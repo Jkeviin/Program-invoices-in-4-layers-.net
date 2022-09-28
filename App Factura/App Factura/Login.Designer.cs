@@ -156,6 +156,7 @@
             this.linkCrearCuenta.TabIndex = 0;
             this.linkCrearCuenta.TabStop = true;
             this.linkCrearCuenta.Text = "¿Quieres crear una cuenta nueva?";
+            this.linkCrearCuenta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCrearCuenta_LinkClicked);
             // 
             // panel1
             // 
