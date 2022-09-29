@@ -45,7 +45,7 @@
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.iconVer = new System.Windows.Forms.PictureBox();
             this.iconNoVer = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtError = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -255,18 +255,18 @@
             this.iconNoVer.TabStop = false;
             this.iconNoVer.Click += new System.EventHandler(this.iconNoVer_Click);
             // 
-            // label2
+            // txtError
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(320, 215);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 16);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Mensaje Error";
+            this.txtError.AutoSize = true;
+            this.txtError.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtError.ForeColor = System.Drawing.Color.Red;
+            this.txtError.Image = ((System.Drawing.Image)(resources.GetObject("txtError.Image")));
+            this.txtError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtError.Location = new System.Drawing.Point(320, 215);
+            this.txtError.Name = "txtError";
+            this.txtError.Size = new System.Drawing.Size(78, 16);
+            this.txtError.TabIndex = 14;
+            this.txtError.Text = "Mensaje Error";
             // 
             // Login
             // 
@@ -274,7 +274,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(780, 330);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtError);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.btnMinimizar);
@@ -322,7 +322,7 @@
         private System.Windows.Forms.PictureBox iconNoVer;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label txtError;
     }
 }
 

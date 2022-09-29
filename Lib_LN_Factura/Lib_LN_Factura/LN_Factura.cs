@@ -171,6 +171,24 @@ namespace Lib_LN_Factura
             }
         }
 
+
+        public bool USP_Listar_Productos(DataGridView objDVG)
+        {
+
+            ClsLlenarGrid objGrid = new ClsLlenarGrid();
+
+            objGrid.SQL = $"execute USP_Listar_Productos";
+            objGrid.NombreTabla = "Productos";
+            if (!objGrid.LlenarGrid(objDVG))
+            {
+                error = objGrid.Error;
+                objGrid = null;
+                return false;
+            }
+            objGrid = null;
+            return true;
+        }
+
         #endregion
     }
 }

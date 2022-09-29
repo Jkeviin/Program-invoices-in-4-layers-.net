@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lib_LN_Factura;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,17 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Lib_LN_Factura;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace App_Factura
 {
-    public partial class PR_CrearProducto : Form
+    public partial class PR_EditarProducto : Form
     {
-        public PR_CrearProducto()
+        public PR_EditarProducto()
         {
             InitializeComponent();
         }
-
 
         private void llenarComboBoxEmpleado()
         {
@@ -30,14 +30,14 @@ namespace App_Factura
             }
         }
 
-        private void PR_CrearProducto_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            llenarComboBoxEmpleado();
+
         }
 
-        private void cBoxCategoria_KeyPress(object sender, KeyPressEventArgs e)
+        private void PR_EditarProducto_Load(object sender, EventArgs e)
         {
-            e.Handled = true;
+            llenarComboBoxEmpleado();
         }
     }
 }

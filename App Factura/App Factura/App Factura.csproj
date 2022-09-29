@@ -52,11 +52,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="E_ListaClientes.cs">
+    <Compile Include="PR_EditarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="E_ListaClientes.Designer.cs">
-      <DependentUpon>E_ListaClientes.cs</DependentUpon>
+    <Compile Include="PR_EditarProducto.Designer.cs">
+      <DependentUpon>PR_EditarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PR_ListarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PR_ListarProducto.Designer.cs">
+      <DependentUpon>PR_ListarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Logo.cs">
       <SubType>Form</SubType>
@@ -102,6 +108,12 @@
     <Compile Include="PR_Registro.Designer.cs">
       <DependentUpon>PR_Registro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PR_EditarProducto.resx">
+      <DependentUpon>PR_EditarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PR_ListarProducto.resx">
+      <DependentUpon>PR_ListarProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Logo.resx">
       <DependentUpon>Logo.cs</DependentUpon>
     </EmbeddedResource>

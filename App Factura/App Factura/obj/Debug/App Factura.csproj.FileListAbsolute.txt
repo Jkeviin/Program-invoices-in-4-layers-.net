@@ -42,3 +42,7 @@ D:\FACTURA\App Factura\App Factura\bin\Debug\LibParametro.pdb
 D:\FACTURA\App Factura\App Factura\obj\Debug\App_Factura.PR_CrearProducto.resources
 D:\FACTURA\App Factura\App Factura\bin\Debug\LibLlenarCombos.dll
 D:\FACTURA\App Factura\App Factura\bin\Debug\LibLlenarCombos.pdb
+D:\FACTURA\App Factura\App Factura\bin\Debug\LibLlenarGrid.dll
+D:\FACTURA\App Factura\App Factura\bin\Debug\LibLlenarGrid.pdb
+D:\FACTURA\App Factura\App Factura\obj\Debug\App_Factura.PR_ListarProducto.resources
+D:\FACTURA\App Factura\App Factura\obj\Debug\App_Factura.PR_EditarProducto.resources

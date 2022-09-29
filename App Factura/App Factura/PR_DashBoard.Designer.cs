@@ -310,9 +310,10 @@
             this.btnEditarProducto.Name = "btnEditarProducto";
             this.btnEditarProducto.Size = new System.Drawing.Size(230, 30);
             this.btnEditarProducto.TabIndex = 18;
-            this.btnEditarProducto.Text = "Editar Producto";
+            this.btnEditarProducto.Text = "Modificar Producto";
             this.btnEditarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditarProducto.UseVisualStyleBackColor = true;
+            this.btnEditarProducto.Click += new System.EventHandler(this.btnEditarProducto_Click);
             // 
             // btnCrearProducto
             // 

@@ -135,8 +135,9 @@ namespace App_Factura
                     this.Hide();
                     return;
                 }
-                MessageBox.Show("Correo o contraseña incorrecta");
-
+                txtCorreo.Text = "";
+                txtContraseña.Text = "";
+                txtError.Text = "              Correo o contraseña incorrecta";
                 objProveedor = null;
                 return;
             }

@@ -401,8 +401,6 @@ CREATE PROCEDURE USP_Actualizar_Proveedor
 			contraseña_PR = @contraseña_PR ,
 			pagina_web_PR = @pagina_web_PR
 		WHERE 	nitProveedor = @nitProveedor
-
-
 	END
 GO
 
@@ -567,7 +565,7 @@ CREATE PROCEDURE USP_COMBOBOX_CLIENTES
 	BEGIN
 		SELECT '0' as cedula_CL , 'Seleccione cliente' as  nom_CL from  CLIENTE
 	union
-		SELECT cedula_CL , nom_CL + ' ' + apellido_CL from CLIENTE order by nom_CL asc;
+		SELECT cedula_CL , nom_CL + ' ' + apellido_CL from CLIENTE where estado_CL = 1 order by nom_CL asc;
 	END
 GO
 
@@ -577,7 +575,7 @@ CREATE PROCEDURE USP_COMBOBOX_CATEGORIA
 	BEGIN
 		SELECT '0' as cod_referenceCT , 'Seleccione una categoria' as  nom_CT from  CATEGORIA
 	union
-		SELECT cod_referenceCT , nom_CT from CATEGORIA
+		SELECT cod_referenceCT , nom_CT from CATEGORIA where estado_CT = 1;
 	END
 GO
 
@@ -587,15 +585,23 @@ CREATE PROCEDURE USP_COMBOBOX_PRODUCTO
 	@cod_referenceCT varchar(50) 
 	AS
 	BEGIN
-		SELECT '0' as cod_P , 'Seleccione una producto' as  nom_P from  PRODUCTO
+		SELECT '0' as cod_P , 'Seleccione una producto' as  nom_P from  PRODUCTO 
 	union 
-		SELECT p.cod_P , p.nom_P FROM PRODUCTO as p INNER JOIN CATEGORIA as c ON c.cod_referenceCT = p.cod_referenceCT where c.cod_referenceCT = @cod_referenceCT
+		SELECT p.cod_P , p.nom_P FROM PRODUCTO as p INNER JOIN CATEGORIA as c ON c.cod_referenceCT = p.cod_referenceCT where c.cod_referenceCT = @cod_referenceCT and estado_P = 1;
 	END
 GO
 
 
-
 -- || LISTAR ||  (Sebastian)
+
+CREATE PROCEDURE USP_Listar_Productos
+	AS
+	BEGIN	
+		SELECT p.cod_P as CODIGO, p.nom_P as NOMBRE, c.nom_CT as CATEGORIA, descripcion_P as DESCRIPCION, p.valor as VALOR, p.stock as STOCK FROM PRODUCTO as p inner join CATEGORIA as c on c.cod_referenceCT = p.cod_referenceCT where estado_P = 1 order by nom_CT asc
+	END
+GO
+
+
 CREATE PROCEDURE USP_Listar_Productos_Venta
 	AS
 	BEGIN	

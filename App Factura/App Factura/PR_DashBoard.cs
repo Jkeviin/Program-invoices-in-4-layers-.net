@@ -258,9 +258,7 @@ namespace App_Factura
 
         private void btnHistorial_Click(object sender, EventArgs e)
         {
-            E_ListaClientes fm = new E_ListaClientes();
-            fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-            AbrirFormEnPanel(fm);
+
         }
 
         private void lblTitle_Click(object sender, EventArgs e)
@@ -283,6 +281,13 @@ namespace App_Factura
         private void btnCrearProducto_Click(object sender, EventArgs e)
         {
             PR_CrearProducto fm = new PR_CrearProducto();
+            fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            AbrirFormEnPanel(fm);
+        }
+
+        private void btnEditarProducto_Click(object sender, EventArgs e)
+        {
+            PR_ListarProducto fm = new PR_ListarProducto();
             fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
             AbrirFormEnPanel(fm);
         }
