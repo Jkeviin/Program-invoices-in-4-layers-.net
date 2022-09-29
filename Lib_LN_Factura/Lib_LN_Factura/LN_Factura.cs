@@ -31,13 +31,23 @@ namespace Lib_LN_Factura
 
         // TELEFONO PROVEEDOR
         private string telefono;
-
         //--------------
 
         // CATEGORIA
         private string cod_referenceCT;
         private string nom_CT;
         private string descripcion_CT;
+        //--------------
+
+        // PRODUCTO
+        private string cod_P;
+        private string nom_P;
+        private string cod_referenceCT_FK;
+        private string descripcion_P;
+        private float valor_P;
+        private int stock_P;
+
+
         #endregion
 
         #region Propiedades
@@ -54,12 +64,28 @@ namespace Lib_LN_Factura
         public string Pagina_web_PR { get => pagina_web_PR; set => pagina_web_PR = value; }
         // TELEFONO PROVEEDOR
         public string Telefono { get => telefono; set => telefono = value; }
+        
         //--------------
 
         // CATEGORIA
         public string Cod_referenceCT { get => cod_referenceCT; set => cod_referenceCT = value; }
         public string Nom_CT { get => nom_CT; set => nom_CT = value; }
         public string Descripcion_CT { get => descripcion_CT; set => descripcion_CT = value; }
+
+        //--------------
+
+        // PRODUCTO
+        public string Cod_P { get => cod_P; set => cod_P = value; }
+        public string Nom_P { get => nom_P; set => nom_P = value; }
+        public string Cod_referenceCT_FK { get => cod_referenceCT_FK; set => cod_referenceCT_FK = value; }
+        public string Descripcion_P { get => descripcion_P; set => descripcion_P = value; }
+        public float Valor_P { get => valor_P; set => valor_P = value; }
+        public int Stock_P { get => stock_P; set => stock_P = value; }
+
+        //--------------
+
+        // PRODUCTO
+
         #endregion
 
         #region Metodos Publicos
@@ -87,8 +113,19 @@ namespace Lib_LN_Factura
             cod_referenceCT = "";
             nom_CT = "";
             descripcion_CT = "";
+
+            //--------------
+
+            // PRODUCTO
+            cod_P = "";
+            nom_P = "";
+            cod_referenceCT_FK = "";
+            descripcion_P = "";
+            valor_P = 0;
+            stock_P = 0;
         }
 
+        #region REGISTRO
         public bool USP_Registro_Proveedor()
         {
             ClsConexion objConexion = new ClsConexion();
@@ -124,6 +161,29 @@ namespace Lib_LN_Factura
                 return true;
             }
         }
+
+        #endregion
+
+        #region ACTUALIZAR
+
+        public bool USP_Actualizar_Producto()
+        {
+            ClsConexion objConexion = new ClsConexion();
+            String sentencia = $"execute USP_Actualizar_Producto '{cod_P}','{nom_P}','{cod_referenceCT_FK}','{descripcion_P}',{valor_P},{stock_P};";
+            if (!objConexion.EjecutarSentencia(sentencia, false))
+            {
+                error = objConexion.Error;
+                objConexion = null;
+                return false;
+
+            }
+            reader = objConexion.Reader;
+            error = "Producto Actualizado";
+            objConexion = null;
+            return true;
+        }
+
+        #endregion 
 
         public bool USP_inicio_sesion_Proveedor()
         {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Conexion>
-  <Servidor>DESKTOP-UG89VU3\SQLEXPRESS</Servidor>
+  <Servidor>ARMDFPCCIFSD051\SQLEXPRESS</Servidor>
   <BaseDatos>FACTURAS</BaseDatos>
   <Usuario></Usuario>
   <Password></Password>

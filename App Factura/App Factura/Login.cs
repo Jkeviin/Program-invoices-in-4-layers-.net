@@ -137,7 +137,7 @@ namespace App_Factura
                 }
                 txtCorreo.Text = "";
                 txtContraseña.Text = "";
-                txtError.Text = "              Correo o contraseña incorrecta";
+                txtError.Text = "           Correo o contraseña incorrecta";
                 objProveedor = null;
                 return;
             }

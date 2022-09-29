@@ -67,6 +67,7 @@
             this.cBoxCategoria.Name = "cBoxCategoria";
             this.cBoxCategoria.Size = new System.Drawing.Size(302, 26);
             this.cBoxCategoria.TabIndex = 27;
+            this.cBoxCategoria.SelectedIndexChanged += new System.EventHandler(this.cBoxCategoria_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -102,6 +103,7 @@
             this.btnCancelar.TabIndex = 34;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnEditar
             // 
@@ -116,7 +118,7 @@
             this.btnEditar.TabIndex = 30;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.button1_Click);
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // label2
             // 
@@ -143,7 +145,7 @@
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(164, 168);
-            this.txtNombre.MaxLength = 14;
+            this.txtNombre.MaxLength = 20;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(302, 24);
             this.txtNombre.TabIndex = 28;

@@ -46,3 +46,17 @@ D:\FACTURA\App Factura\App Factura\bin\Debug\LibLlenarGrid.dll
 D:\FACTURA\App Factura\App Factura\bin\Debug\LibLlenarGrid.pdb
 D:\FACTURA\App Factura\App Factura\obj\Debug\App_Factura.PR_ListarProducto.resources
 D:\FACTURA\App Factura\App Factura\obj\Debug\App_Factura.PR_EditarProducto.resources
+C:\Users\adsi\Desktop\program-invoices-in-4-layers-.net\App Factura\App Factura\bin\Debug\Lib_LN_Factura.dll
+C:\Users\adsi\Desktop\program-invoices-in-4-layers-.net\App Factura\App Factura\bin\Debug\LibConexionBD.dll
+C:\Users\adsi\Desktop\program-invoices-in-4-layers-.net\App Factura\App Factura\bin\Debug\LibLlenarCombos.dll
+C:\Users\adsi\Desktop\program-invoices-in-4-layers-.net\App Factura\App Factura\bin\Debug\LibLlenarGrid.dll
+C:\Users\adsi\Desktop\program-invoices-in-4-layers-.net\App Factura\App Factura\bin\Debug\LibParametro.dll
+C:\Users\adsi\Desktop\program-invoices-in-4-layers-.net\App Factura\App Factura\bin\Debug\Lib_LN_Factura.pdb
+C:\Users\adsi\Desktop\program-invoices-in-4-layers-.net\App Factura\App Factura\bin\Debug\LibConexionBD.pdb
+C:\Users\adsi\Desktop\program-invoices-in-4-layers-.net\App Factura\App Factura\bin\Debug\LibLlenarCombos.pdb
+C:\Users\adsi\Desktop\program-invoices-in-4-layers-.net\App Factura\App Factura\bin\Debug\LibLlenarGrid.pdb
+C:\Users\adsi\Desktop\program-invoices-in-4-layers-.net\App Factura\App Factura\bin\Debug\LibParametro.pdb
+C:\Users\adsi\Desktop\program-invoices-in-4-layers-.net\App Factura\App Factura\obj\Debug\App_Factura.PR_EditarProducto.resources
+C:\Users\adsi\Desktop\program-invoices-in-4-layers-.net\App Factura\App Factura\obj\Debug\App_Factura.PR_ListarProducto.resources
+C:\Users\adsi\Desktop\program-invoices-in-4-layers-.net\App Factura\App Factura\obj\Debug\App_Factura.PR_CrearProducto.resources
+C:\Users\adsi\Desktop\program-invoices-in-4-layers-.net\App Factura\App Factura\obj\Debug\App_Factura.PR_Registro.resources

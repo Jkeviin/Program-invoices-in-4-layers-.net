@@ -16,6 +16,7 @@ namespace App_Factura
         public PR_ListarProducto()
         {
             InitializeComponent();
+            
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -35,9 +36,6 @@ namespace App_Factura
             this.Close();
         }
 
-
-
-
         private void btnEditar_Click(object sender, EventArgs e)
         {
             PR_EditarProducto frm = new PR_EditarProducto();
@@ -46,27 +44,24 @@ namespace App_Factura
             {
                 frm.txtCodigo.Text = DgvProducto.CurrentRow.Cells[0].Value.ToString();
                 frm.txtNombre.Text = DgvProducto.CurrentRow.Cells[1].Value.ToString();
-                frm.cBoxCategoria.Text = DgvProducto.CurrentRow.Cells[2].Value.ToString();
-                frm.txtDescripcion.Text = DgvProducto.CurrentRow.Cells[2].Value.ToString();
-                frm.txtValor.Text = DgvProducto.CurrentRow.Cells[3].Value.ToString();
-                frm.txtStock.Text = DgvProducto.CurrentRow.Cells[4].Value.ToString();
+                frm.txtDescripcion.Text = DgvProducto.CurrentRow.Cells[3].Value.ToString();
+                frm.txtValor.Text = DgvProducto.CurrentRow.Cells[4].Value.ToString();
+                frm.txtStock.Text = DgvProducto.CurrentRow.Cells[5].Value.ToString();
+                frm.FormClosed += new FormClosedEventHandler(ActualizarGrid);
                 frm.ShowDialog();
-
             }
             else
                 MessageBox.Show("seleccione una fila por favor");
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
         }
 
         private void InsertarFilas()
         {
         }
 
-        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+
+        private void ActualizarGrid(object sender, FormClosedEventArgs e)
         {
+            llenarGRid();
         }
 
         private void llenarGRid()
