@@ -174,7 +174,6 @@
             this.cBoxCategoria.Location = new System.Drawing.Point(257, 212);
             this.cBoxCategoria.Name = "cBoxCategoria";
             this.cBoxCategoria.Size = new System.Drawing.Size(302, 33);
-            this.cBoxCategoria.Sorted = true;
             this.cBoxCategoria.TabIndex = 2;
             this.cBoxCategoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cBoxCategoria_KeyPress);
             // 
