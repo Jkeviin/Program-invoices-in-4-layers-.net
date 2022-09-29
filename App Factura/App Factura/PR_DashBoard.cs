@@ -118,9 +118,11 @@ namespace App_Factura
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro de cerrar?", "Alerta¡¡", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("¿Está seguro de Cerrar Sesión?", "Alerta¡¡", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Application.Exit();
+                Login Login = new Login();
+                Login.Show();
+                this.Close();
             }
         }
 
@@ -195,11 +197,13 @@ namespace App_Factura
         {
             MostrarFormLogo();
         }
+
         //METODO PARA MOSTRAR FORMULARIO DE LOGO Al CERRAR OTROS FORM ----------------------------------------------------------
         private void MostrarFormLogoAlCerrarForms(object sender, FormClosedEventArgs e)
         {
             MostrarFormLogo();
         }
+
         //METODOS PARA ABRIR OTROS FORMULARIOS Y MOSTRAR FORM DE LOGO Al CERRAR ----------------------------------------------------------
         private void btnListaClientes_Click(object sender, EventArgs e)
         {

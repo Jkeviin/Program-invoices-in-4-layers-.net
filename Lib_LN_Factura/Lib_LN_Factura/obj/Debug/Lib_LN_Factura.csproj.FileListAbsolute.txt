@@ -1,0 +1,13 @@
+D:\FACTURA\Lib_LN_Factura\Lib_LN_Factura\bin\Debug\Lib_LN_Factura.dll
+D:\FACTURA\Lib_LN_Factura\Lib_LN_Factura\bin\Debug\Lib_LN_Factura.pdb
+D:\FACTURA\Lib_LN_Factura\Lib_LN_Factura\bin\Debug\LibConexionBD.dll
+D:\FACTURA\Lib_LN_Factura\Lib_LN_Factura\bin\Debug\LibParametro.dll
+D:\FACTURA\Lib_LN_Factura\Lib_LN_Factura\bin\Debug\LibConexionBD.pdb
+D:\FACTURA\Lib_LN_Factura\Lib_LN_Factura\bin\Debug\LibParametro.pdb
+D:\FACTURA\Lib_LN_Factura\Lib_LN_Factura\obj\Debug\Lib_LN_Factura.csproj.AssemblyReference.cache
+D:\FACTURA\Lib_LN_Factura\Lib_LN_Factura\obj\Debug\Lib_LN_Factura.csproj.CoreCompileInputs.cache
+D:\FACTURA\Lib_LN_Factura\Lib_LN_Factura\obj\Debug\Lib_LN_Factura.csproj.CopyComplete
+D:\FACTURA\Lib_LN_Factura\Lib_LN_Factura\obj\Debug\Lib_LN_Factura.dll
+D:\FACTURA\Lib_LN_Factura\Lib_LN_Factura\obj\Debug\Lib_LN_Factura.pdb
+D:\FACTURA\Lib_LN_Factura\Lib_LN_Factura\bin\Debug\LibLlenarGrid.dll
+D:\FACTURA\Lib_LN_Factura\Lib_LN_Factura\bin\Debug\LibLlenarGrid.pdb

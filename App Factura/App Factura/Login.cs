@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Lib_LN_Factura;
+using System.Data.SqlClient;
+
 
 namespace App_Factura
 {
@@ -18,15 +21,17 @@ namespace App_Factura
             InitializeComponent();
         }
 
+        // tamaño ventana
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static IntPtr SendMessage(IntPtr hWnd, int wmsg, int wparam, int lParam);
 
 
+        #region diseño Texbox
         private void txtCorreo_Enter(object sender, EventArgs e)
         {
-            if(txtCorreo.Text == "CORREO")
+            if (txtCorreo.Text == "CORREO")
             {
                 txtCorreo.Text = "";
                 txtCorreo.ForeColor = Color.LightGray;
@@ -36,7 +41,7 @@ namespace App_Factura
 
         private void txtCorreo_Leave(object sender, EventArgs e)
         {
-            if( txtCorreo.Text == "")
+            if (txtCorreo.Text == "")
             {
                 txtCorreo.Text = "CORREO";
                 txtCorreo.ForeColor = Color.DimGray;
@@ -63,6 +68,21 @@ namespace App_Factura
             }
         }
 
+        private void iconVer_Click(object sender, EventArgs e)
+        {
+            iconNoVer.BringToFront();
+            txtContraseña.UseSystemPasswordChar = false;
+        }
+
+        private void iconNoVer_Click(object sender, EventArgs e)
+        {
+            iconVer.BringToFront();
+            txtContraseña.UseSystemPasswordChar = true;
+        }
+        #endregion
+
+
+        #region Botones ventana
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -78,30 +98,60 @@ namespace App_Factura
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+        #endregion
 
-        private void iconVer_Click(object sender, EventArgs e)
-        {
-            iconNoVer.BringToFront();
-            txtContraseña.UseSystemPasswordChar = false;
-        }
-
-        private void iconNoVer_Click(object sender, EventArgs e)
-        {
-            iconVer.BringToFront();
-            txtContraseña.UseSystemPasswordChar = true;
-        }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             // CERRAR
-            PR_DashBoard Vent_Proveedor = new PR_DashBoard();
-            Vent_Proveedor.Show();
-            this.Hide();
+
+            LN_Factura objProveedor = new LN_Factura();
+            // declarar variables
+            string correo, contraseña;
+            SqlDataReader reader;
+            // leer
+            try
+            {
+                //capturar variables
+                correo = txtCorreo.Text;
+                contraseña = txtContraseña.Text;
+
+                //Enviar valores al LN
+                objProveedor.Correo_PR = correo;
+                objProveedor.Contraseña_PR = contraseña;
+
+                if (!objProveedor.USP_inicio_sesion_Proveedor())
+                {
+                    MessageBox.Show(objProveedor.Error);
+                    objProveedor = null;
+                    return;
+                }
+                reader = objProveedor.Reader;
+
+                if (reader.HasRows)
+                {
+                    PR_DashBoard fr = new PR_DashBoard();
+                    fr.Show();
+                    this.Hide();
+                    return;
+                }
+                MessageBox.Show("Correo o contraseña incorrecta");
+
+                objProveedor = null;
+                return;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                objProveedor = null;
+            }
         }
 
         private void linkCrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
+           PR_Registro registro = new PR_Registro();
+            registro.Show();
+            this.Hide();
         }
     }
 }

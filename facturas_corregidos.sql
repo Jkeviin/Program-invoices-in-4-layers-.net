@@ -360,13 +360,22 @@ CREATE PROCEDURE USP_Registro_Proveedor
 	@direccion_PR varchar(200),
 	@correo_PR varchar(50),
 	@contraseña_PR varchar(100),
-	@pagina_web_PR varchar(50)
+	@pagina_web_PR varchar(50),
+	@telefono varchar(20)
 	as
 	BEGIN 
 		INSERT INTO PROVEEDOR(nitProveedor, nom_PR, descript_PR, direccion_PR, Correo_PR, contraseña_PR, pagina_web_PR, estado_PR) VALUES
 						 (@nitProveedor, @nom_PR, @descript_PR, @direccion_PR, @correo_PR,@contraseña_PR, @pagina_web_PR, 1);
+		-- Telefono
+
+		INSERT INTO TELEFONO_PROVEEDOR(nitProveedor, telefono) VALUES
+						 (@nitProveedor, @telefono);
 	END
 GO
+
+--execute USP_Registro_Proveedor '1234', 'Amazon', 'Excelentes productos de toda gama', 'calle 3 #24', 'amazon@gmail.com', 'proveedor123', 'www.amazon.com', '31012341212';
+--go
+
 CREATE PROCEDURE USP_Actualizar_Proveedor
 	@nitProveedor varchar(50),
 	@nom_PR varchar(50),
@@ -385,7 +394,9 @@ CREATE PROCEDURE USP_Actualizar_Proveedor
 			correo_PR = @correo_PR,
 			contraseña_PR = @contraseña_PR ,
 			pagina_web_PR = @pagina_web_PR
-		WHERE 	nitProveedor = @nitProveedor 
+		WHERE 	nitProveedor = @nitProveedor
+
+
 	END
 GO
 
@@ -399,15 +410,7 @@ CREATE PROCEDURE USP_eliminar_Proovedor
 	END
 GO
 -- PROCEDIMIENTOS TELEFONO_PROVEEDOR (Kevin Ortega)
-CREATE PROCEDURE USP_Registro_Telefono_Proveedor
-	@nitProveedor varchar(50),
-	@telefono varchar(20)
-	as
-	BEGIN 
-		INSERT INTO TELEFONO_PROVEEDOR(nitProveedor, telefono) VALUES
-						 (@nitProveedor, @telefono);
-	END
-GO
+
 CREATE PROCEDURE USP_Actualizar_Telefono_Proveedor
 	@id_tel int,
 	@nitProveedor varchar(50),
@@ -529,12 +532,12 @@ GO
 CREATE PROCEDURE USP_inicio_sesion_Empleado
 	@correo_E varchar(100),
 	@contraseña_E varchar(100)
-
 	AS
 	BEGIN
-	select cedula_E   from EMPLEADO where contraseña_E = @contraseña_E and correo_E = @correo_E and cedula_E = 1;
+	select cedula_E   from EMPLEADO where contraseña_E = @contraseña_E and correo_E = @correo_E and estado_E = 1;
 	END
 GO
+
 
 -- INICIO SESION PROVEEDOR (Kevin Ortega)
 CREATE PROCEDURE USP_inicio_sesion_Proveedor
@@ -543,9 +546,14 @@ CREATE PROCEDURE USP_inicio_sesion_Proveedor
 
 	AS
 	BEGIN
-	select nitProveedor from PROVEEDOR where contraseña_PR = @contraseña_PR and correo_PR = @correo_PR;
+	select * from PROVEEDOR where contraseña_PR = @contraseña_PR and correo_PR = @correo_PR and estado_PR = 1;
 	END
 GO
+
+
+select * from PROVEEDOR
+execute USP_inicio_sesion_Proveedor '12213', '12312'
+
 
  -- || COMBO BOX ||
 
