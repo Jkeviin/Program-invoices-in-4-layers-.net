@@ -51,6 +51,7 @@ create table CATEGORIA (
 	estado_CT bit not null
 );
 
+
 -- K
 GO
 create table PRODUCTO (
@@ -200,6 +201,9 @@ GO
 INSERT INTO PROVEEDOR (nitProveedor,nom_PR, descript_PR, direccion_PR, correo_PR,contraseña_PR, pagina_web_PR, estado_PR) VALUES
 						('12345','Importanciones gomez hermanos', 'Los mejores proovedores de todo el pais', 'calle10a #77-44', 'importancionesgomezhermanos@gmail.com', 'proveedor123', 'www.gomezhermanos.com', 1);
 GO
+INSERT INTO PROVEEDOR (nitProveedor,nom_PR, descript_PR, direccion_PR, correo_PR,contraseña_PR, pagina_web_PR, estado_PR) VALUES
+						('1','Admin', 'Detalle Ad,om', '000', 'admin', 'admin', 'www.admin.com', 1);
+GO
 INSERT INTO TELEFONO_PROVEEDOR (nitProveedor, telefono) VALUES
 						('12345', '3107567654');
 GO
@@ -281,6 +285,8 @@ CREATE PROCEDURE USP_Registro_Categoria
 						 (@cod_referenceCT, @nom_CT , @descrip_CT, 1);
 	END
 GO
+
+
 
 CREATE PROCEDURE USP_Actualizar_Categoria
 	@cod_referenceCT varchar(50),
@@ -367,7 +373,7 @@ CREATE PROCEDURE USP_Registro_Proveedor
 		INSERT INTO PROVEEDOR(nitProveedor, nom_PR, descript_PR, direccion_PR, Correo_PR, contraseña_PR, pagina_web_PR, estado_PR) VALUES
 						 (@nitProveedor, @nom_PR, @descript_PR, @direccion_PR, @correo_PR,@contraseña_PR, @pagina_web_PR, 1);
 		-- Telefono
-
+		
 		INSERT INTO TELEFONO_PROVEEDOR(nitProveedor, telefono) VALUES
 						 (@nitProveedor, @telefono);
 	END
@@ -550,11 +556,9 @@ CREATE PROCEDURE USP_inicio_sesion_Proveedor
 	END
 GO
 
-
 select * from PROVEEDOR
-execute USP_inicio_sesion_Proveedor '12213', '12312'
 
-
+go
  -- || COMBO BOX ||
 
  -- Combo box Cliente (Daniel)
@@ -573,9 +577,10 @@ CREATE PROCEDURE USP_COMBOBOX_CATEGORIA
 	BEGIN
 		SELECT '0' as cod_referenceCT , 'Seleccione una categoria' as  nom_CT from  CATEGORIA
 	union
-		SELECT cod_referenceCT , nom_CT  from CATEGORIA order by nom_CT ASC;
+		SELECT cod_referenceCT , nom_CT from CATEGORIA
 	END
 GO
+
 
  -- Combo box Producto (Kevin - Daniel)
 CREATE PROCEDURE USP_COMBOBOX_PRODUCTO
@@ -587,6 +592,7 @@ CREATE PROCEDURE USP_COMBOBOX_PRODUCTO
 		SELECT p.cod_P , p.nom_P FROM PRODUCTO as p INNER JOIN CATEGORIA as c ON c.cod_referenceCT = p.cod_referenceCT where c.cod_referenceCT = @cod_referenceCT
 	END
 GO
+
 
 
 -- || LISTAR ||  (Sebastian)
@@ -638,7 +644,6 @@ GO
 
 
 --CATEGORIA
-GO
 CREATE PROCEDURE USP_buscar_categoria
 @cod_referenceCT varchar(50)
 as 

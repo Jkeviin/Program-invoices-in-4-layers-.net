@@ -280,6 +280,13 @@ namespace App_Factura
             AbrirFormEnPanel(fm);
         }
 
+        private void btnCrearProducto_Click(object sender, EventArgs e)
+        {
+            PR_CrearProducto fm = new PR_CrearProducto();
+            fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            AbrirFormEnPanel(fm);
+        }
+
         private void OcultarSubMenuActivo()
         {
             if (SubMenuProductos.Visible)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lib_LN_Factura;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +42,46 @@ namespace App_Factura
         private void FormMantCliente_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            LN_Factura objProveedor = new LN_Factura();
+            // declarar variables
+            string codigo, nombre, descripcion;
+            try
+            {
+                //capturar variables
+                codigo = txtCodigo.Text;
+                nombre = txtNombre.Text;
+                descripcion = txtDescripcion.Text;
+
+                //Enviar valores al LN
+                objProveedor.Cod_referenceCT = codigo;
+                objProveedor.Nom_CT = nombre;
+                objProveedor.Descripcion_CT = descripcion;
+
+                if (!objProveedor.USP_Registro_Categoria())
+                {
+                    MessageBox.Show(objProveedor.Error);
+                    objProveedor = null;
+                    return;
+                }
+                else
+                {
+                    txtCodigo.Text = "";
+                    txtNombre.Text = "";
+                    txtDescripcion.Text = "";
+                    MessageBox.Show(objProveedor.Error);
+                    objProveedor = null;
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                objProveedor = null;
+            }
         }
     }
 }

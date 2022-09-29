@@ -11,3 +11,5 @@ D:\FACTURA\Lib_LN_Factura\Lib_LN_Factura\obj\Debug\Lib_LN_Factura.dll
 D:\FACTURA\Lib_LN_Factura\Lib_LN_Factura\obj\Debug\Lib_LN_Factura.pdb
 D:\FACTURA\Lib_LN_Factura\Lib_LN_Factura\bin\Debug\LibLlenarGrid.dll
 D:\FACTURA\Lib_LN_Factura\Lib_LN_Factura\bin\Debug\LibLlenarGrid.pdb
+D:\FACTURA\Lib_LN_Factura\Lib_LN_Factura\bin\Debug\LibLlenarCombos.dll
+D:\FACTURA\Lib_LN_Factura\Lib_LN_Factura\bin\Debug\LibLlenarCombos.pdb

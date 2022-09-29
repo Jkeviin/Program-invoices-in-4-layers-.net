@@ -332,6 +332,7 @@
             this.btnCrearProducto.Text = "Crear Producto";
             this.btnCrearProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCrearProducto.UseVisualStyleBackColor = true;
+            this.btnCrearProducto.Click += new System.EventHandler(this.btnCrearProducto_Click);
             // 
             // panelBtnProductos
             // 

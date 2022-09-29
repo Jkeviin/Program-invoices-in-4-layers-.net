@@ -121,6 +121,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="PR_CrearProducto.resx">
+      <DependentUpon>PR_CrearProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PR_DashBoard.resx">
       <DependentUpon>PR_DashBoard.cs</DependentUpon>
     </EmbeddedResource>

@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 using LibConexionBD;
 using System.Data.Sql;
 using System.Data.SqlClient;
-//using System.Windows.Forms;
+using System.Windows.Forms;
 using LibLlenarGrid;
+using LibLlenarCombos;
 
 namespace Lib_LN_Factura
 {
@@ -30,6 +31,13 @@ namespace Lib_LN_Factura
 
         // TELEFONO PROVEEDOR
         private string telefono;
+
+        //--------------
+
+        // CATEGORIA
+        private string cod_referenceCT;
+        private string nom_CT;
+        private string descripcion_CT;
         #endregion
 
         #region Propiedades
@@ -46,6 +54,12 @@ namespace Lib_LN_Factura
         public string Pagina_web_PR { get => pagina_web_PR; set => pagina_web_PR = value; }
         // TELEFONO PROVEEDOR
         public string Telefono { get => telefono; set => telefono = value; }
+        //--------------
+
+        // CATEGORIA
+        public string Cod_referenceCT { get => cod_referenceCT; set => cod_referenceCT = value; }
+        public string Nom_CT { get => nom_CT; set => nom_CT = value; }
+        public string Descripcion_CT { get => descripcion_CT; set => descripcion_CT = value; }
         #endregion
 
         #region Metodos Publicos
@@ -66,6 +80,13 @@ namespace Lib_LN_Factura
 
             // TELEFONO PROVEEDOR
             telefono = "";
+
+            //--------------
+
+            // CATEGORIA
+            cod_referenceCT = "";
+            nom_CT = "";
+            descripcion_CT = "";
         }
 
         public bool USP_Registro_Proveedor()
@@ -86,6 +107,24 @@ namespace Lib_LN_Factura
             }
         }
 
+        public bool USP_Registro_Categoria()
+        {
+            ClsConexion objConexion = new ClsConexion();
+            String sentencia = $"execute USP_Registro_Categoria '{cod_referenceCT}', '{nom_CT}', '{descripcion_CT}';";
+            if (!objConexion.EjecutarSentencia(sentencia, false))
+            {
+                error = objConexion.Error;
+                objConexion = null;
+                return false;
+            }
+            else
+            {
+                error = "Categoria registrada exitosamente";
+                objConexion = null;
+                return true;
+            }
+        }
+
         public bool USP_inicio_sesion_Proveedor()
         {
             ClsConexion objConexion = new ClsConexion();
@@ -101,6 +140,35 @@ namespace Lib_LN_Factura
             error = "Proovedor consultado";
             objConexion = null;
             return true;
+        }
+
+        public bool USP_COMBOBOX_CATEGORIA(ComboBox objCb)
+        {
+            /*objCb y obC es diferente, el primero es un objeto de comboBox y el otro de la clase
+            llenar combos*/
+            ClsLlenarCombos objC = new ClsLlenarCombos();
+            objC.NombreTabla = "Datos Categoria";
+            objC.SQL = "execute USP_COMBOBOX_CATEGORIA";
+            objC.ColumnaTexto = "nom_CT";
+            objC.ColumnaValor = "cod_referenceCT";
+            try
+            {
+                if (!objC.LlenarCombo(objCb))
+                {
+                    error = objC.Error;
+                    objC = null;
+                    return false;
+                }
+                objC = null;
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                objC = null;
+                return false;
+            }
         }
 
         #endregion
