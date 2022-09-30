@@ -268,7 +268,9 @@ namespace App_Factura
 
         private void btnAjustes_Click(object sender, EventArgs e)
         {
-
+            PR_Ajustes fm = new PR_Ajustes();
+            fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            AbrirFormEnPanel(fm);
         }
 
         private void btnCrearCategoria_Click(object sender, EventArgs e)

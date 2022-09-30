@@ -278,6 +278,7 @@
             // 
             // btnBorrarProducto
             // 
+            this.btnBorrarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnBorrarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBorrarProducto.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBorrarProducto.FlatAppearance.BorderSize = 0;
@@ -291,9 +292,9 @@
             this.btnBorrarProducto.Name = "btnBorrarProducto";
             this.btnBorrarProducto.Size = new System.Drawing.Size(230, 30);
             this.btnBorrarProducto.TabIndex = 19;
-            this.btnBorrarProducto.Text = "Eliminar Producto";
+            this.btnBorrarProducto.Text = "Buscar Producto";
             this.btnBorrarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBorrarProducto.UseVisualStyleBackColor = true;
+            this.btnBorrarProducto.UseVisualStyleBackColor = false;
             // 
             // btnEditarProducto
             // 
@@ -391,6 +392,7 @@
             // 
             // btnEliminarCategoria
             // 
+            this.btnEliminarCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btnEliminarCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminarCategoria.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEliminarCategoria.FlatAppearance.BorderSize = 0;
@@ -404,9 +406,9 @@
             this.btnEliminarCategoria.Name = "btnEliminarCategoria";
             this.btnEliminarCategoria.Size = new System.Drawing.Size(230, 30);
             this.btnEliminarCategoria.TabIndex = 19;
-            this.btnEliminarCategoria.Text = "Eliminar Categoria";
+            this.btnEliminarCategoria.Text = "Buscar Categoria";
             this.btnEliminarCategoria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEliminarCategoria.UseVisualStyleBackColor = true;
+            this.btnEliminarCategoria.UseVisualStyleBackColor = false;
             // 
             // btnEditarCategoria
             // 
@@ -423,7 +425,7 @@
             this.btnEditarCategoria.Name = "btnEditarCategoria";
             this.btnEditarCategoria.Size = new System.Drawing.Size(230, 30);
             this.btnEditarCategoria.TabIndex = 18;
-            this.btnEditarCategoria.Text = "Editar Categoria";
+            this.btnEditarCategoria.Text = "Modificar Categoria";
             this.btnEditarCategoria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditarCategoria.UseVisualStyleBackColor = true;
             // 

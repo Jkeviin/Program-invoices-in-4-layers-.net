@@ -76,5 +76,39 @@ namespace App_Factura
             objProveedor = null;
             return;
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro de ELIMINAR el producto?", "Alerta¡¡", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                LN_Factura objProveedor = new LN_Factura();
+                // declarar variables
+                string codigo;
+                try
+                {
+                    //capturar variables
+                    codigo = DgvProducto.CurrentRow.Cells[0].Value.ToString();
+
+                    //Enviar valores al LN
+                    objProveedor.Cod_P = codigo;
+
+                    if (!objProveedor.USP_eliminar_Producto())
+                    {
+                        MessageBox.Show(objProveedor.Error);
+                        objProveedor = null;
+                        return;
+                    }
+                    llenarGRid();
+                    MessageBox.Show(objProveedor.Error);
+                    objProveedor = null;
+                    return;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    objProveedor = null;
+                }
+            }
+        }
     }
 }

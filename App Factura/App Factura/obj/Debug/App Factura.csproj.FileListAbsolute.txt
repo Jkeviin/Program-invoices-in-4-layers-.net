@@ -60,3 +60,4 @@ C:\Users\adsi\Desktop\program-invoices-in-4-layers-.net\App Factura\App Factura\
 C:\Users\adsi\Desktop\program-invoices-in-4-layers-.net\App Factura\App Factura\obj\Debug\App_Factura.PR_ListarProducto.resources
 C:\Users\adsi\Desktop\program-invoices-in-4-layers-.net\App Factura\App Factura\obj\Debug\App_Factura.PR_CrearProducto.resources
 C:\Users\adsi\Desktop\program-invoices-in-4-layers-.net\App Factura\App Factura\obj\Debug\App_Factura.PR_Registro.resources
+C:\Users\adsi\Desktop\program-invoices-in-4-layers-.net\App Factura\App Factura\obj\Debug\App_Factura.PR_COMPRA.resources

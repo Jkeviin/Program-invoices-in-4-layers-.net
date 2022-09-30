@@ -162,6 +162,25 @@ namespace Lib_LN_Factura
             }
         }
 
+        public bool USP_Registro_Producto()
+        {
+            ClsConexion objConexion = new ClsConexion();
+            String sentencia = $"execute USP_Registro_Producto '{cod_P}','{nom_P}','{cod_referenceCT_FK}','{descripcion_P}',{valor_P};";
+            if (!objConexion.EjecutarSentencia(sentencia, false))
+            {
+                error = objConexion.Error;
+                objConexion = null;
+                return false;
+            }
+            else
+            {
+                error = "Producto registrado exitosamente";
+                objConexion = null;
+                return true;
+            }
+        }
+
+
         #endregion
 
         #region ACTUALIZAR
@@ -183,7 +202,26 @@ namespace Lib_LN_Factura
             return true;
         }
 
-        #endregion 
+        #endregion
+
+        #region ELIMINAR
+        public bool USP_eliminar_Producto()
+        {
+            ClsConexion objConexion = new ClsConexion();
+            String sentencia = $"execute USP_eliminar_Producto '{cod_P}'";
+            if (!objConexion.EjecutarSentencia(sentencia, false))
+            {
+                error = objConexion.Error;
+                objConexion = null;
+                return false;
+
+            }
+            reader = objConexion.Reader;
+            error = "Producto Eliminado";
+            objConexion = null;
+            return true;
+        }
+        #endregion
 
         public bool USP_inicio_sesion_Proveedor()
         {
