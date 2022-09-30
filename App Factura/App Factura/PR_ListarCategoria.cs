@@ -9,60 +9,47 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Lib_LN_Factura;
 
+
+
 namespace App_Factura
 {
-    public partial class PR_ListarProducto : Form
+    public partial class PR_ListarCategoria : Form
     {
-        public PR_ListarProducto()
+        public PR_ListarCategoria()
         {
             InitializeComponent();
-            
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
+        private void PR_listar_categoria_Load(object sender, EventArgs e)
         {
-            this.Close();
+            llenarGrid();
         }
-
-        private void FormListaClientes_Load(object sender, EventArgs e)
-        {
-            llenarGRid();
-        }
-        
-
-        private void BtnCerrar_Click_1(object sender, EventArgs e)
+        private void BtnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            PR_EditarProducto frm = new PR_EditarProducto();
+            PR_EditarCategoria frm = new PR_EditarCategoria();
 
             if (DgvProducto.SelectedRows.Count > 0)
             {
                 frm.txtCodigo.Text = DgvProducto.CurrentRow.Cells[0].Value.ToString();
                 frm.txtNombre.Text = DgvProducto.CurrentRow.Cells[1].Value.ToString();
-                frm.txtDescripcion.Text = DgvProducto.CurrentRow.Cells[3].Value.ToString();
-                frm.txtValor.Text = DgvProducto.CurrentRow.Cells[4].Value.ToString();
-                frm.txtStock.Text = DgvProducto.CurrentRow.Cells[5].Value.ToString();
+                frm.txtDescripcion.Text = DgvProducto.CurrentRow.Cells[2].Value.ToString();
                 frm.FormClosed += new FormClosedEventHandler(ActualizarGrid);
                 frm.ShowDialog();
             }
             else
-                MessageBox.Show("seleccione una fila por favor");
+            {
+                MessageBox.Show("Seleccione una fila por favor");
+            }
         }
-
-
-        private void ActualizarGrid(object sender, FormClosedEventArgs e)
-        {
-            llenarGRid();
-        }
-
-        private void llenarGRid()
+        private void llenarGrid()
         {
             LN_Factura objProveedor = new LN_Factura();
-            if (!objProveedor.USP_Listar_Productos(DgvProducto))
+            if (!objProveedor.USP_Listar_Categoria(DgvProducto))
             {
                 MessageBox.Show(objProveedor.Error);
                 objProveedor = null;
@@ -72,9 +59,14 @@ namespace App_Factura
             return;
         }
 
+        private void ActualizarGrid(object sender, FormClosedEventArgs e)
+        {
+            llenarGrid();
+        }
+
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro de ELIMINAR el producto?", "Alerta¡¡", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("¿Está seguro de ELIMINAR la categoria?", "Alerta¡¡", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 LN_Factura objProveedor = new LN_Factura();
                 // declarar variables
@@ -87,13 +79,13 @@ namespace App_Factura
                     //Enviar valores al LN
                     objProveedor.Cod_P = codigo;
 
-                    if (!objProveedor.USP_Eliminar_Categoria())
+                    if (!objProveedor.USP_eliminar_Producto())
                     {
                         MessageBox.Show(objProveedor.Error);
                         objProveedor = null;
                         return;
                     }
-                    llenarGRid();
+                    llenarGrid();
                     MessageBox.Show(objProveedor.Error);
                     objProveedor = null;
                     return;
@@ -105,5 +97,7 @@ namespace App_Factura
                 }
             }
         }
+
     }
+
 }

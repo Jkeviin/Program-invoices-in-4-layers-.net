@@ -34,8 +34,8 @@
             this.panelContenedorForm = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.lbFecha = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.lblHora = new System.Windows.Forms.Label();
@@ -126,8 +126,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblTelefono);
+            this.panel1.Controls.Add(this.lblNombre);
             this.panel1.Controls.Add(this.lbFecha);
             this.panel1.Controls.Add(this.pictureBox7);
             this.panel1.Controls.Add(this.lblHora);
@@ -148,27 +148,27 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Proveedor";
             // 
-            // label4
+            // lblTelefono
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.LightGray;
-            this.label4.Location = new System.Drawing.Point(78, 28);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 16);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Telefono";
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono.ForeColor = System.Drawing.Color.LightGray;
+            this.lblTelefono.Location = new System.Drawing.Point(78, 28);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(61, 16);
+            this.lblTelefono.TabIndex = 6;
+            this.lblTelefono.Text = "Telefono";
             // 
-            // label3
+            // lblNombre
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.LightGray;
-            this.label3.Location = new System.Drawing.Point(78, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Nombres ";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.LightGray;
+            this.lblNombre.Location = new System.Drawing.Point(78, 10);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(66, 16);
+            this.lblNombre.TabIndex = 5;
+            this.lblNombre.Text = "Nombres ";
             // 
             // lbFecha
             // 
@@ -428,6 +428,7 @@
             this.btnEditarCategoria.Text = "Modificar Categoria";
             this.btnEditarCategoria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditarCategoria.UseVisualStyleBackColor = true;
+            this.btnEditarCategoria.Click += new System.EventHandler(this.btnEditarCategoria_Click);
             // 
             // btnCrearCategoria
             // 
@@ -792,8 +793,6 @@
         private System.Windows.Forms.Panel panelContenedorForm;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbFecha;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label lblHora;
@@ -828,6 +827,8 @@
         private System.Windows.Forms.Panel panelBtnAjustes;
         private System.Windows.Forms.Button btnAjustes;
         private System.Windows.Forms.PictureBox pictureBox4;
+        public System.Windows.Forms.Label lblTelefono;
+        public System.Windows.Forms.Label lblNombre;
     }
 }
 

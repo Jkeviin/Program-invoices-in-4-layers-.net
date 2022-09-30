@@ -19,8 +19,6 @@ namespace App_Factura
             InitializeComponent();
         }
 
-
-
         /// //////////////////////////
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -70,7 +68,12 @@ namespace App_Factura
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-
+            if (txtContraseña.Text != txtConfirmContraseña.Text)
+            {
+                MessageBox.Show("La contraseña no coincide.");
+                return;
+            }
+                
             LN_Factura objProveedor = new LN_Factura();
             // declarar variables
             string nit, nombre, web, direccion, telefono, descripcion, correo, contraseña;

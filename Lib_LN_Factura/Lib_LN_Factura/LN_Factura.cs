@@ -202,6 +202,22 @@ namespace Lib_LN_Factura
             return true;
         }
 
+        public bool USP_Actualizar_Proveedor()
+        {
+            ClsConexion objConexion = new ClsConexion();
+            string sentencia = $"execute USP_Actualizar_Proveedor '{nitProveedor}' , '{nom_PR}' , '{descript_PR}' , '{direccion_PR}', '{correo_PR}','{contraseña_PR}','{pagina_web_PR}' ";
+            if (!objConexion.EjecutarSentencia(sentencia, false))
+            {
+                error = objConexion.Error;
+                objConexion = null;
+                return false;
+            }
+            error = "Se actualizo correctamente";
+            objConexion = null;
+            return true;
+        }
+
+
         #endregion
 
         #region ELIMINAR
@@ -221,7 +237,40 @@ namespace Lib_LN_Factura
             objConexion = null;
             return true;
         }
+
+        public bool USP_Eliminar_Proveedor()
+        {
+
+            ClsConexion objConexion = new ClsConexion();
+            string sentencia = $"execute USP_eliminar_Proovedor '{nitProveedor}'";
+            if (!objConexion.EjecutarSentencia(sentencia, false))
+            {
+                error = objConexion.Error;
+                objConexion = null;
+                return false;
+            }
+            error = "Se ha eliminado tu cuenta";
+            objConexion = null;
+            return true;
+        }
+
+        public bool USP_Eliminar_Categoria()
+        {
+
+            ClsConexion objConexion = new ClsConexion();
+            string sentencia = $"execute USP_Eliminar_Categoria '{cod_referenceCT}'";
+            if (!objConexion.EjecutarSentencia(sentencia, false))
+            {
+                error = objConexion.Error;
+                objConexion = null;
+                return false;
+            }
+            error = "Se ha eliminado la categoria";
+            objConexion = null;
+            return true;
+        }
         #endregion
+
 
         public bool USP_inicio_sesion_Proveedor()
         {
@@ -269,7 +318,7 @@ namespace Lib_LN_Factura
             }
         }
 
-
+        #region LISTAR
         public bool USP_Listar_Productos(DataGridView objDVG)
         {
 
@@ -286,6 +335,27 @@ namespace Lib_LN_Factura
             objGrid = null;
             return true;
         }
+
+        public bool USP_Listar_Categoria(DataGridView objDVG)
+        {
+
+            ClsLlenarGrid objGrid = new ClsLlenarGrid();
+
+            objGrid.SQL = $"execute USP_Listar_Categoria";
+            objGrid.NombreTabla = "Categoria";
+
+
+            if (!objGrid.LlenarGrid(objDVG))
+            {
+                error = objGrid.Error;
+                objGrid = null;
+                return false;
+            }
+            objGrid = null;
+            return true;
+        }
+        #endregion
+
 
         #endregion
     }

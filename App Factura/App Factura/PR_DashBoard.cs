@@ -23,6 +23,24 @@ namespace App_Factura
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             this.DoubleBuffered = true;
         }
+
+        #region Datos Proveedor Actual
+        private string nit;
+        private string nombre;
+        private string direccion;
+        private string descripcion;
+        private string correo;
+        private string web;
+
+        public string Nit { get => nit; set => nit = value; }
+        public string Nombre { get => nombre; set => nombre = value; }
+        public string Direccion { get => direccion; set => direccion = value; }
+        public string Descripcion { get => descripcion; set => descripcion = value; }
+        public string Correo { get => correo; set => correo = value; }
+        public string Web { get => web; set => web = value; }
+
+        #endregion
+
         //METODO PARA REDIMENCIONAR/CAMBIAR TAMAÑO A FORMULARIO  TIEMPO DE EJECUCION ----------------------------------------------------------
         private int tolerance = 15;
         private const int WM_NCHITTEST = 132;
@@ -82,6 +100,7 @@ namespace App_Factura
         //METODOS PARA CERRAR,MAXIMIZAR, MINIMIZAR FORMULARIO------------------------------------------------------
         int lx, ly;
         int sw, sh;
+
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
             lx = this.Location.X;
@@ -137,6 +156,7 @@ namespace App_Factura
                 this.btnCategorias.Text = "";
                 this.btnProductos.Text = "";
                 this.btnAjustes.Text = "";
+                OcultarSubmenu();
             }
             else if (panelMenu.Width == 55)
             {
@@ -204,32 +224,11 @@ namespace App_Factura
             MostrarFormLogo();
         }
 
-        //METODOS PARA ABRIR OTROS FORMULARIOS Y MOSTRAR FORM DE LOGO Al CERRAR ----------------------------------------------------------
-        private void btnListaClientes_Click(object sender, EventArgs e)
-        {
-            //FormListaClientes fm = new FormListaClientes();
-            //fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-            //AbrirFormEnPanel(fm);
-        }
-
-        private void btnMembresia_Click(object sender, EventArgs e)
-        {
-            //FormMembresia frm = new FormMembresia();
-            //frm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
-            //AbrirFormEnPanel(frm);
-        }
-
         //METODO PARA HORA Y FECHA ACTUAL ----------------------------------------------------------
         private void tmFechaHora_Tick(object sender, EventArgs e)
         {
             lbFecha.Text = DateTime.Now.ToLongDateString();
             lblHora.Text = DateTime.Now.ToString("HH:mm:ssss");
-        }
-        
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            //AbrirFormEnPanel(new Form1());
         }
 
 
@@ -271,6 +270,14 @@ namespace App_Factura
             PR_Ajustes fm = new PR_Ajustes();
             fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
             AbrirFormEnPanel(fm);
+
+            fm.txtNit.Text = nit;
+            fm.txtNombre.Text = nombre;
+            fm.txtDireccion.Text = direccion;
+            fm.txtDescripcion.Text = descripcion;
+            fm.txtPaginaWeb.Text = web;
+            fm.txtCorreo.Text = correo;
+            fm.txtCorreo.Text = correo;
         }
 
         private void btnCrearCategoria_Click(object sender, EventArgs e)
@@ -278,6 +285,7 @@ namespace App_Factura
             PR_CrearCategoria fm = new PR_CrearCategoria();
             fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
             AbrirFormEnPanel(fm);
+            fm = null;
         }
 
         private void btnCrearProducto_Click(object sender, EventArgs e)
@@ -285,6 +293,7 @@ namespace App_Factura
             PR_CrearProducto fm = new PR_CrearProducto();
             fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
             AbrirFormEnPanel(fm);
+            fm = null;
         }
 
         private void btnEditarProducto_Click(object sender, EventArgs e)
@@ -292,6 +301,15 @@ namespace App_Factura
             PR_ListarProducto fm = new PR_ListarProducto();
             fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
             AbrirFormEnPanel(fm);
+            fm = null;
+        }
+
+        private void btnEditarCategoria_Click(object sender, EventArgs e)
+        {
+            PR_ListarCategoria fm = new PR_ListarCategoria();
+            fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            AbrirFormEnPanel(fm);
+            fm = null;
         }
 
         private void OcultarSubMenuActivo()
@@ -306,13 +324,20 @@ namespace App_Factura
 
         private void MostrarSubmenu(Panel subMenu)
         {
-            if (!subMenu.Visible)
+            if (panelMenu.Width == 55)
             {
-                subMenu.Visible = true;
+                MessageBox.Show("Abra el menu para acceder a las opciones.");
             }
             else
             {
-                subMenu.Visible = false;
+                if (!subMenu.Visible)
+                {
+                    subMenu.Visible = true;
+                }
+                else
+                {
+                    subMenu.Visible = false;
+                }
             }
         }
         #endregion

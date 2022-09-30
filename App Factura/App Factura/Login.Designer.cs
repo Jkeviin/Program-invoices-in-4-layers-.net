@@ -259,7 +259,7 @@
             // 
             this.txtError.AutoSize = true;
             this.txtError.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtError.ForeColor = System.Drawing.Color.Red;
+            this.txtError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
             this.txtError.Image = ((System.Drawing.Image)(resources.GetObject("txtError.Image")));
             this.txtError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtError.Location = new System.Drawing.Point(320, 215);
@@ -267,6 +267,7 @@
             this.txtError.Size = new System.Drawing.Size(78, 16);
             this.txtError.TabIndex = 14;
             this.txtError.Text = "Mensaje Error";
+            this.txtError.Visible = false;
             // 
             // Login
             // 

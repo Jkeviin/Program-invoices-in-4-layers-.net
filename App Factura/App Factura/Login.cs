@@ -104,7 +104,6 @@ namespace App_Factura
         private void btnLogin_Click(object sender, EventArgs e)
         {
             // CERRAR
-
             LN_Factura objProveedor = new LN_Factura();
             // declarar variables
             string correo, contraseña;
@@ -133,10 +132,24 @@ namespace App_Factura
                     PR_DashBoard fr = new PR_DashBoard();
                     fr.Show();
                     this.Hide();
+
+                    reader.Read();
+                    fr.Nit = reader.GetString(0);
+                    fr.Nombre = reader.GetString(1);
+                    fr.lblNombre.Text = reader.GetString(1);
+                    fr.Descripcion = reader.GetString(2);
+                    fr.Direccion = reader.GetString(3);
+                    fr.Correo = reader.GetString(4);
+                    fr.Web = reader.GetString(6);
+             
+                    
+                    reader.Close();
+
                     return;
                 }
                 txtCorreo.Text = "";
                 txtContraseña.Text = "";
+                txtError.Visible = true;
                 txtError.Text = "           Correo o contraseña incorrecta";
                 objProveedor = null;
                 return;

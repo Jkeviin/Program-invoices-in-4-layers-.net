@@ -617,9 +617,9 @@
 	CREATE PROCEDURE USP_Listar_Categoria
 		AS
 		BEGIN
-		SELECT nom_CT AS "Nombre" FROM CATEGORIA order by nom_CT ASC;
-		END
-	GO
+		SELECT cod_referenceCT AS "Código", nom_CT AS "Nombre", descripcion_CT AS "Descripción" FROM CATEGORIA order by nom_CT ASC;
+	END
+	go
 
 	CREATE PROCEDURE USP_Listar_Cliente
 		as

@@ -58,11 +58,23 @@
     <Compile Include="PR_COMPRA.Designer.cs">
       <DependentUpon>PR_COMPRA.cs</DependentUpon>
     </Compile>
+    <Compile Include="PR_EditarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PR_EditarCategoria.Designer.cs">
+      <DependentUpon>PR_EditarCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="PR_EditarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PR_EditarProducto.Designer.cs">
       <DependentUpon>PR_EditarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PR_ListarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PR_ListarCategoria.Designer.cs">
+      <DependentUpon>PR_ListarCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="PR_ListarProducto.cs">
       <SubType>Form</SubType>
@@ -114,11 +126,20 @@
     <Compile Include="PR_Registro.Designer.cs">
       <DependentUpon>PR_Registro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PR_Ajustes.resx">
+      <DependentUpon>PR_Ajustes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PR_COMPRA.resx">
       <DependentUpon>PR_COMPRA.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PR_EditarCategoria.resx">
+      <DependentUpon>PR_EditarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PR_EditarProducto.resx">
       <DependentUpon>PR_EditarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PR_ListarCategoria.resx">
+      <DependentUpon>PR_ListarCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PR_ListarProducto.resx">
       <DependentUpon>PR_ListarProducto.cs</DependentUpon>
