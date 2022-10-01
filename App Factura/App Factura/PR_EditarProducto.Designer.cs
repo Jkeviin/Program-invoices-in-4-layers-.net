@@ -39,7 +39,6 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.BtnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtValor = new System.Windows.Forms.TextBox();
@@ -154,7 +153,6 @@
             // 
             this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(43)))), ((int)(((byte)(58)))));
             this.BarraTitulo.Controls.Add(this.label6);
-            this.BarraTitulo.Controls.Add(this.BtnCerrar);
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
@@ -171,18 +169,6 @@
             this.label6.Size = new System.Drawing.Size(244, 29);
             this.label6.TabIndex = 15;
             this.label6.Text = "EDITAR PRODUCTO";
-            // 
-            // BtnCerrar
-            // 
-            this.BtnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCerrar.FlatAppearance.BorderSize = 0;
-            this.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCerrar.Location = new System.Drawing.Point(480, 0);
-            this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(38, 38);
-            this.BtnCerrar.TabIndex = 4;
-            this.BtnCerrar.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -240,7 +226,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 503);
+            this.ClientSize = new System.Drawing.Size(518, 496);
             this.Controls.Add(this.txtStock);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtValor);
@@ -280,7 +266,6 @@
         public System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Panel BarraTitulo;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button BtnCerrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox txtValor;

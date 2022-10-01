@@ -206,6 +206,7 @@ namespace App_Factura
             this.panelContenedorForm.Controls.Add(fh);
             this.panelContenedorForm.Tag = fh;
             fh.Show();
+            fh = null;
         }
         //METODO PARA MOSTRAR FORMULARIO DE LOGO Al INICIAR ----------------------------------------------------------
         private void MostrarFormLogo()
@@ -278,6 +279,7 @@ namespace App_Factura
             fm.txtPaginaWeb.Text = web;
             fm.txtCorreo.Text = correo;
             fm.txtCorreo.Text = correo;
+            fm = null;
         }
 
         private void btnCrearCategoria_Click(object sender, EventArgs e)

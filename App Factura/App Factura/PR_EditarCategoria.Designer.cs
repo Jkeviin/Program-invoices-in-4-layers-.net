@@ -39,7 +39,6 @@ namespace App_Factura
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.BtnCerrar = new System.Windows.Forms.Button();
             this.BarraTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -140,7 +139,6 @@ namespace App_Factura
             // 
             this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(43)))), ((int)(((byte)(58)))));
             this.BarraTitulo.Controls.Add(this.label6);
-            this.BarraTitulo.Controls.Add(this.BtnCerrar);
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
@@ -157,18 +155,6 @@ namespace App_Factura
             this.label6.Size = new System.Drawing.Size(245, 29);
             this.label6.TabIndex = 15;
             this.label6.Text = "EDITAR CATEGORIA";
-            // 
-            // BtnCerrar
-            // 
-            this.BtnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCerrar.FlatAppearance.BorderSize = 0;
-            this.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCerrar.Location = new System.Drawing.Point(454, 0);
-            this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(38, 38);
-            this.BtnCerrar.TabIndex = 4;
-            this.BtnCerrar.UseVisualStyleBackColor = true;
             // 
             // PR_EditarCategoria
             // 
@@ -208,6 +194,5 @@ namespace App_Factura
         public System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Panel BarraTitulo;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button BtnCerrar;
     }
 }

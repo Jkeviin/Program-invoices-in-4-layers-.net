@@ -43,8 +43,9 @@ namespace App_Factura
             }
             else
             {
-                MessageBox.Show("Seleccione una fila por favor");
+                MessageBox.Show("Seleccione una fila por favor");    
             }
+            frm = null;
         }
         private void llenarGrid()
         {

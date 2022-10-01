@@ -141,10 +141,8 @@ namespace App_Factura
                     fr.Direccion = reader.GetString(3);
                     fr.Correo = reader.GetString(4);
                     fr.Web = reader.GetString(6);
-             
-                    
                     reader.Close();
-
+                    fr = null;
                     return;
                 }
                 txtCorreo.Text = "";
@@ -166,6 +164,7 @@ namespace App_Factura
            PR_Registro registro = new PR_Registro();
             registro.Show();
             this.Hide();
+            registro = null;
         }
     }
 }

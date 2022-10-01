@@ -34,9 +34,10 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtNit = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.lineShape6 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -62,10 +63,11 @@
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.shapeContainer3 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnVolver = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconVer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconNoVer)).BeginInit();
@@ -73,7 +75,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.IconNoVer2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegistrar
@@ -146,6 +148,28 @@
             this.panel1.TabIndex = 18;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnCerrar);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(997, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(70, 57);
+            this.panel2.TabIndex = 22;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(122)))), ((int)(((byte)(140)))));
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.Location = new System.Drawing.Point(10, 3);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(48, 51);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 15;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
@@ -167,19 +191,6 @@
             this.lblTitle.Size = new System.Drawing.Size(156, 31);
             this.lblTitle.TabIndex = 20;
             this.lblTitle.Text = "FACTFAST";
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(122)))), ((int)(((byte)(140)))));
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(10, 3);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(48, 51);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 15;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // lineShape6
             // 
@@ -489,14 +500,18 @@
             this.shapeContainer3.TabIndex = 0;
             this.shapeContainer3.TabStop = false;
             // 
-            // panel2
+            // btnVolver
             // 
-            this.panel2.Controls.Add(this.btnCerrar);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(997, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(70, 57);
-            this.panel2.TabIndex = 22;
+            this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVolver.Image = ((System.Drawing.Image)(resources.GetObject("btnVolver.Image")));
+            this.btnVolver.Location = new System.Drawing.Point(110, 533);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(61, 51);
+            this.btnVolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnVolver.TabIndex = 16;
+            this.btnVolver.TabStop = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // PR_Registro
             // 
@@ -504,6 +519,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(1067, 622);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnRegistrar);
@@ -517,8 +533,9 @@
             this.Text = "Registro";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconVer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconNoVer)).EndInit();
@@ -528,7 +545,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -569,5 +586,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer3;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox btnVolver;
     }
 }

@@ -283,8 +283,15 @@ namespace App_Factura
         }
 
 
+
         #endregion
 
-
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            Login fm = new Login();
+            this.Close();
+            fm.Show();
+            fm = null;
+        }
     }
 }

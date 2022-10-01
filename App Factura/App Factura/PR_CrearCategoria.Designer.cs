@@ -30,7 +30,6 @@
         {
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.BtnCerrar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,7 +45,6 @@
             // 
             this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(43)))), ((int)(((byte)(58)))));
             this.BarraTitulo.Controls.Add(this.label6);
-            this.BarraTitulo.Controls.Add(this.BtnCerrar);
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
@@ -64,19 +62,6 @@
             this.label6.Size = new System.Drawing.Size(274, 29);
             this.label6.TabIndex = 15;
             this.label6.Text = "AGREGAR CATEGORIA";
-            // 
-            // BtnCerrar
-            // 
-            this.BtnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCerrar.FlatAppearance.BorderSize = 0;
-            this.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCerrar.Location = new System.Drawing.Point(832, 0);
-            this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(38, 38);
-            this.BtnCerrar.TabIndex = 4;
-            this.BtnCerrar.UseVisualStyleBackColor = true;
-            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // txtNombre
             // 
@@ -199,7 +184,6 @@
         #endregion
 
         private System.Windows.Forms.Panel BarraTitulo;
-        private System.Windows.Forms.Button BtnCerrar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGuardar;

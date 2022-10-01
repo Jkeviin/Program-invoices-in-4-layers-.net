@@ -39,7 +39,7 @@
             this.lblTITLE.AutoSize = true;
             this.lblTITLE.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTITLE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblTITLE.Location = new System.Drawing.Point(340, 268);
+            this.lblTITLE.Location = new System.Drawing.Point(339, 298);
             this.lblTITLE.Name = "lblTITLE";
             this.lblTITLE.Size = new System.Drawing.Size(195, 39);
             this.lblTITLE.TabIndex = 1;
@@ -48,7 +48,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(325, 119);
+            this.pictureBox1.Location = new System.Drawing.Point(324, 149);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(225, 146);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -61,9 +61,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
-            this.ClientSize = new System.Drawing.Size(870, 457);
+            this.ClientSize = new System.Drawing.Size(870, 485);
             this.Controls.Add(this.lblTITLE);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Logo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormLogo";
